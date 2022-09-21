@@ -1,0 +1,492 @@
+
+/*Version Mobile*/
+
+/*A todos (*) los elementos cuando se agrega margin, borde, 
+pading no crezcan mas alla del tamaño que se especifique */
+*{
+    box-sizing: border-box;
+}
+
+/*Aplico a todo html para q el scroll baje mas vistosamente  */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/*quitamos el margen de la pagina en las esquinas*/
+body{
+    /*Cambiamos la fuente*/
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/*Cambiamos el tamaño de encabezados y parrafos - 
+em = tamaño relativo al valor real de la fuente*/
+h1{ font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+
+/* Quitamos los puntos en la lista Registrese */
+/*ul{list-style: none;}*/
+/*Modificamos el tamaño de los elementos de la lista*/
+li{font-size: 1.25em;}
+
+/*Estilos para botones*/
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    /*tamaño boton - 10 alto 30 ancho*/
+    padding: 10px 20px ;
+    /*bordes circulares*/
+    border-radius: 10px;
+    /*estilo borde algo gris de 1px de tamaño*/
+    border: 1px solid rgba(0,0,0,0.5);
+    /*sombras al boton*/
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    /*Color y fondo al boton*/
+    color: white;
+    background-color: rgb(46, 49, 146);
+}
+
+/* cambia el comportamiento del boton cuando se 
+pasa el cursor por encima*/
+button:hover{
+    background-color: rgb(92, 175, 203);
+}
+
+/*creamos clase para cambiar color de las letras de un texto*/
+.color-acento{color: rgb(46, 49, 146);}
+.color-acentoc{color: rgb(92, 175, 203);}
+/*Estilizamos container*/
+.container{
+    /*ancho maximo del contenedor para que la pagina al llegar 
+    al maximo de 1000px la pagina se centre*/
+    max-width: 1000px;
+    margin: auto;
+}
+
+/*Estilizamos el header*/
+header{
+    /*agregamos color de fondo*/
+    background-color: rgb(245,245,245);
+}
+
+/*Estilizar el logo llamando a la clase logo*/
+header .logo{
+    /*margin 0 para que se ubique arriba */
+    margin: 0;
+    /*pading 25px tamaño ariba y abajo pading 30px derecha e izquierda*/
+    padding: 25px 30px;
+    /*Vamos a modificar logo negrita, color y mas grande*/
+    font-weight: bold;
+    color: rgb(46, 49, 146);
+    font-size: 1.6em;
+}
+
+/*Seleccionamos el header del logo y dentro 
+de este seleccionamos container, podriamos seleccionar p o nav*/
+header .container{
+    /*para centrar el contenido del logo*/
+    display: flex ;
+    /*ordena las cosas en una columna*/
+    flex-direction: column;
+    /*centra horizontalemte*/
+    align-items: center;
+}
+
+/*Estilizamos el nav detro del header*/
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/*Estilizamos todos los vinculos*/
+
+header a{
+    /*Pading superior 5px e inferior 12px, */
+    padding: 5px 12px;
+    text-decoration: none;
+    /*negrita, color negro, */
+    font-weight: bold;
+    color: black;
+}
+
+/* cambia el color de letra de los vinculos cuando se 
+pasa el cursor por encima*/
+header a:hover{
+    color: rgb(92, 175, 203);
+}
+
+/*Estilizar hero que es el banner que aparece en todas las paginas*/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    /*cambia la altura relativa dependiendo el tamaño de la pantalla 90%*/
+    height: 90vh;
+    /*hacemos un contraste con la imagen de fondo*/
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5))
+    /*insertamos la imagen de fondo*/
+    ,url("../images/faeropuerto.jpg");
+    /*evitamos que se repita el fondo*/
+    background-repeat: no-repeat;
+    /*Para que la imagen de fondo ocupe todo el espacio asignado*/
+    background-size: cover;
+    /*centramos el fondo*/
+    background-position: center center;
+}
+
+#hero h1{
+    color: rgb(255, 255, 255);
+}
+
+
+
+/*modificamos el contenedor dentro queienes somos*/
+#qsomos .container{
+    text-align: center;
+    /*arriba y abajo 200px y abajo y arriba 12px*/
+    padding: 200px 12 px;
+}
+
+/*mofificamos nuestros destinos*/
+/*mofifica fondo y color texto y estilos generales*/
+#destinos{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+/*mofifica tamaño del container arriba y abajo 150px laterales 
+12px de container*/
+#destinos .container{
+    padding: 150px 12px;
+}
+
+/*modifica las propiedades de h2 dentro de destinos*/
+#destinos h2{
+    margin-top: 0;
+
+}
+
+/*modifica las propiedades de p dentro de destinos */
+#destinos p{
+    display: none;
+}
+
+/*creamos las cartas para cada ciudad* ojo revisar
+#destinos .carta{
+    display: none;
+}
+
+/*primera carta*/
+
+#destinos .carta1{
+    /*hacemos un contraste o gradiente con la imagen de fondo*/
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),
+                                           rgba(0,0,0,0.5)
+    )
+    ,url("../images/ipiales.jpg");
+    /*evitamos que se repita el fondo*/
+    background-repeat: no-repeat;
+    /*Para que la imagen de fondo ocupe todo el espacio asignado*/
+    background-size: cover;
+    /*centramos el fondo*/
+    background-position: center center;
+    /*crea la forma en la carta arriba abajo 50px derecha izquierda 0px
+    la margen o contorno de separacion 30px y el borde redondo border radius 15px*/
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+
+}
+/*segunda carta*/
+#destinos .carta2{
+    /*hacemos un contraste o gradiente con la imagen de fondo*/
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),
+                                           rgba(0,0,0,0.5)
+    )
+    ,url("../images/bogota.jpg");
+    /*evitamos que se repita el fondo*/
+    background-repeat: no-repeat;
+    /*Para que la imagen de fondo ocupe todo el espacio asignado*/
+    background-size: cover;
+    /*centramos el fondo*/
+    background-position: center center;
+    /*crea la forma en la carta arriba abajo 50px derecha izquierda 0px
+    la margen o contorno de separacion 30px y el borde redondo border radius 15px*/
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+/*tercera carta*/
+#destinos .carta3{
+    /*hacemos un contraste o gradiente con la imagen de fondo*/
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.5),
+                                           rgba(0,0,0,0.5)
+    )
+    ,url("../images/barranquilla.jpg");
+    /*evitamos que se repita el fondo*/
+    background-repeat: no-repeat;
+    /*Para que la imagen de fondo ocupe todo el espacio asignado*/
+    background-size: cover;
+    /*centramos el fondo*/
+    background-position: center center;
+    /*crea la forma en la carta arriba abajo 50px derecha izquierda 0px
+    la margen o contorno de separacion 30px y el borde redondo border radius 15px*/
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+/*seleccionamos id registrese*/
+#registrese .container{
+    padding: 50px 12px;
+}
+/*modificamos el titulo*/
+#registrese h2{
+    margin-top: 0;
+    text-align: center;
+}
+
+/*Modificamos la lista de registrese*/
+#registrese li{
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+/*Modificamos reserva tu vuelo*/
+#reservas{
+    /*Modificamos la lista de reservas*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*centramos texto*/
+    text-align: center;
+    background-color: rgb(30,30,30);
+    /*Modificamos color de texto*/
+    color: white;
+    /*Modificamos la altura*/
+    height: 50vh;
+}
+
+#reservas h2{
+    /*tamaño de fuente relativa, ya q se hace mas grande o pequeña
+     dependiendo del tamaño de la pantalla */
+    font-size: 10vw;
+}
+#reservas button{
+    /*tamaño de fuente relativa, ya q se hace mas grande o pequeña
+     dependiendo del tamaño de la pantalla */
+    font-size: 5vw;
+}
+
+/*Estilizamos pie de pagina*/
+footer{
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    /*pocicionar elemento margen arriba*/
+    margin: 0;
+    /*para q el parrafo no se pegue tanto al fondo*/
+    padding: 20px;
+    color:rgb(100,100,100);
+
+}
+
+footer .container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+     /*pocicionar elemento en el medio abajo*/
+    align-items: flex-end;
+}
+
+/****** fin version movile *****/
+
+/**Estilizamos para pantalla grande****/
+
+/**Cuando el ancho de la pantalla 
+    supere los 720px ****/
+@media (min-width:850px){
+
+    /**Mantiene el menu de forma permanente an el parte de arriba ***/
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+
+    header .container{
+        /**Me Ubica el logo y el menu en fila o linea ***/
+        flex-direction: row;
+        /**separa los elementos en las esquinas de una linea ***/
+        justify-content: space-between;
+    }
+
+    header nav{
+        /**Me Ubica el menu en fila o linea ***/
+        flex-direction: row;
+        padding-bottom: 0;
+        /*alineacion de izquierda*/
+        padding-right: 20px;
+    }
+
+    /*Modificamos quienes somos*/
+    #qsomos .container{
+        display:flex;
+        justify-content: space-evenly;
+    }
+
+    /*modificamos el texto de la derecha en quienes somos*/
+    #qsomos .texto{
+        padding: 50px 10px;
+        width: 60%;
+        max-width: 600px;
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    /*Eliminamos margen superior*/
+    #qsomos h2{
+        margin-top: 0px;
+    }
+
+
+    /*Agregamos imagen a quienes somos*/
+    #qsomos .img-container{
+       
+        /*insertamos imagen como fondo*/
+         background-image: url("../images/quienes2.jpg");
+        /*evitamos que se repita el fondo*/
+        background-repeat: no-repeat;
+        /*Para que la imagen de fondo ocupe todo el espacio asignado
+        background-size: cover;*/
+        /*centramos el fondo*/
+        background-position: center center;
+        /*alto*/
+        height: 500px;
+        /*ancho*/
+        width: 500px;
+    }
+    /*creamos la presentacion de destinos cuando se amplia la pantalla*/
+    #destinos .cdestinos{
+        display: flex;
+        justify-content: center;
+        
+    }
+    /*Bloqueamos el parrafo para que aparezca el texto y cambiamos el tamaño*/
+    #destinos p{
+        font-size: 1em;
+        display: block;
+        margin-bottom: 30px;
+
+    }
+
+    /*Modificamos el h3 de destinos*/
+    #destinos h3{
+        
+        margin-top:0px;
+    }
+    
+
+
+    /*Hacemos pading y sombra para cada carta*/
+    #destinos .carta1{
+        padding: 15px;
+        /*sombra*/
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+    #destinos .carta2{
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+    #destinos .carta3{
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+   
+    /*Modificamos registrese*/
+    #registrese .container{
+        text-align:initial;
+    }
+    #registrese ul{
+        margin-left: 100px;
+    }
+     /*Insertamos imagen en registrese*/
+     #registrese{
+        background-image: url("../images/registrese.png");
+        background-repeat: no-repeat;
+        /*le asignamos un tamaño a la imagen*/
+        background-size: 300px 300px ;
+        /*pociciono la imagen arriba abajo y como va  aparece la imagen en el div*/
+        background-position: calc(100vw - 400px) 0px;
+     }
+ /*Modificamos h2*/
+  #registrese h2{
+    text-align:initial;
+    margin-left: 120px;
+}
+
+
+}
+
+#formulreg{
+    display: inline;
+    position:right;
+    float:inline-start;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    flex-direction: column;
+    right:80px;
+    top:100px;
+    padding: 20px;
+
+    
+}
+
+
+#formulreg form{
+    width: 400px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+#formulref input{
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    margin: 8px 10px;
+    display: inline-block;
+}
+
+#formulref button {
+    text-align: center;
+    font-weight: bold;
+  }
+
+div.titulo_pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    height: 20vh;
+    color: #377ba8;
+    background-color: rgb(219, 232, 236);
+  }
+
+  div.titulo_pagina h1{
+    font-family: 'Courier New', Courier, monospace;
+  }

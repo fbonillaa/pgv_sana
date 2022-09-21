@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeropuerto Santa Ana</title>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/miEstilo.css') }}">-->
+    <link rel="stylesheet" type="text/css" href="../static/css/estilos.css">
+
+
+</head>
+<body>
+
+    <!-- logo y menu responsive -->
+    <header>
+        <div class="container">
+            <!-- parrafo -->
+            <p class="logo">Aeropuerto <span class="color-acentoc">Santa Ana</span></p>
+            <!--menu-->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#qsomos">Sobre Nosotros</a>
+                <a href="#destinos">Destinos</a>
+                <a href="#reservas">Reservas</a>  
+                <a href="#hero">Iniciar Sesion</a>               
+            </nav>
+        </div>
+    </header>
+
+    <div class="titulo_pagina">
+        <br>
+        <h1>Registro de nuevos pasajeros</h1>
+    </div>
+    
+
+     <!--seccion baner que aparece en todas las paginas-->
+    <section id="formulreg">
+        
+        <form action="" method="get" name="formRegistro" onSubmit="validar_formulario();">
+        <p>Nombre: <input type="text" id="nombre" name="nombre" /></p> 
+        <p>Usuario: <input type="text" id="username" name="username" /></p>
+        <p>        Sexo: <input type="radio" id="sexo" name="sexo" value="h" />
+        hombre <input type="radio" name="sexo" id="sexo" value="m" />
+        mujer  </p>
+        <p> Correo: <input type="text" id="correo" name="correo" maxlength="100" /></p>
+        <p> Contraseña: <input type="password" id="password" name="password" /> 
+        <img src="{{ url_for('static', filename='images/view.png') }}" onmouseover="mostrarPassword();" onmouseout="ocultarPassword();"/></p>
+        <p> <input type="checkbox" name="condiciones" />
+        Declaro haber leido y acepto las condiciones generales <br>
+        del Aeropuerto y la normativa sobre proteccion de datos</p>
+        <button type="submit" value="Enviar">Enviar</button>
+        <button type="reset" value="borrar">Borrar</button>
+        </form> 
+    </section>
+
+   
+
+    <!--seccion copyright-->
+    <footer>
+        <div class="container">
+            <p>&copy; Misión Tic - Derechos Reservados 2022</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
