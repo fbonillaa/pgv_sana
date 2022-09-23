@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeropuerto Santa Ana</title>
-    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/miEstilo.css') }}">-->
-    <link rel="stylesheet" type="text/css" href="../static/css/estilos.css">
-
-
+    <title>Aeropueto Santa Ana</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estiloreg.css">
 </head>
 <body>
 
@@ -16,14 +14,14 @@
     <header>
         <div class="container">
             <!-- parrafo -->
-            <p class="logo">Aeropuerto <span class="color-acentoc">Santa Ana</span></p>
+            <p class="logo">Aeropueto <span class="color-acentoc">Santa Ana</span></p>
             <!--menu-->
             <nav>
                 <a href="#qsomos">Sobre Nosotros</a>
                 <a href="#destinos">Destinos</a>
-                <a href="#registrese">Registrese</a>
-                <a href="#reservas">Reservas</a>  
-                <a href="#hero">Iniciar Sesion</a>               
+                <a href="#ingreso">Reservas</a>                 
+                <a href="#ingreso">Iniciar Sesion</a>
+                <a href="registro.html">Registrese</a>               
             </nav>
         </div>
     </header>
@@ -31,7 +29,7 @@
      <!--seccion baner que aparece en todas las paginas-->
     <section id="hero">
         <h1>Gestiona tus vuelos</h1>
-        <form action="https://www.uninorte.edu.co/web/educacion-continuada/misiontic2022">
+        <form action="#ingreso">
            <button>INGRESA YA</button>
         </form>   
     </section>
@@ -91,7 +89,7 @@
         </div>  
     </section>
                             
-    <!--seccion Registrese-->
+    <!--seccion Registrese
     <section id="registrese">
         <div class="container">
             <h2>Regis<span class="color-acento">trese</span></h2>
@@ -102,9 +100,20 @@
             </ul>
         </div>
 
+    </section> 
+    -->
+
+    <section id="ingreso" class="form-ingreso">
+        <div class="container">
+            <h4>Formulario de ingreso</h4>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+            <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña">
+            <input class="botons" type="submit" value="Ingresar">
+            <p><a href="registro.html">No  tengo Cuenta</a></p>
+        
     </section>
 
-    <!--seccion Reservas-->
+    <!--seccion Reservas
     <section id="reservas">
         
             <h2>Reserva <span class="color-acentoc">tu vuelo</span></h2>
@@ -113,6 +122,7 @@
             </form>
         
     </section>
+    -->
 
     <!--seccion copyright-->
     <footer>

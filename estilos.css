@@ -133,7 +133,7 @@ header a:hover{
     /*hacemos un contraste con la imagen de fondo*/
     background-image: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5))
     /*insertamos la imagen de fondo*/
-    ,url("../images/faeropuerto.jpg");
+    ,url("media/faeropuerto.jpg");
     /*evitamos que se repita el fondo*/
     background-repeat: no-repeat;
     /*Para que la imagen de fondo ocupe todo el espacio asignado*/
@@ -143,7 +143,7 @@ header a:hover{
 }
 
 #hero h1{
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 
@@ -192,7 +192,7 @@ header a:hover{
     background-image: linear-gradient(0deg,rgba(0,0,0,0.5),
                                            rgba(0,0,0,0.5)
     )
-    ,url("../images/ipiales.jpg");
+    ,url("media/ipiales.jpg");
     /*evitamos que se repita el fondo*/
     background-repeat: no-repeat;
     /*Para que la imagen de fondo ocupe todo el espacio asignado*/
@@ -212,7 +212,7 @@ header a:hover{
     background-image: linear-gradient(0deg,rgba(0,0,0,0.5),
                                            rgba(0,0,0,0.5)
     )
-    ,url("../images/bogota.jpg");
+    ,url("media/bogota.jpg");
     /*evitamos que se repita el fondo*/
     background-repeat: no-repeat;
     /*Para que la imagen de fondo ocupe todo el espacio asignado*/
@@ -231,7 +231,7 @@ header a:hover{
     background-image: linear-gradient(0deg,rgba(0,0,0,0.5),
                                            rgba(0,0,0,0.5)
     )
-    ,url("../images/barranquilla.jpg");
+    ,url("media/barranquilla.jpg");
     /*evitamos que se repita el fondo*/
     background-repeat: no-repeat;
     /*Para que la imagen de fondo ocupe todo el espacio asignado*/
@@ -365,7 +365,7 @@ footer .container{
     #qsomos .img-container{
        
         /*insertamos imagen como fondo*/
-         background-image: url("../images/quienes2.jpg");
+         background-image: url("media/quienes2.jpg");
         /*evitamos que se repita el fondo*/
         background-repeat: no-repeat;
         /*Para que la imagen de fondo ocupe todo el espacio asignado
@@ -423,70 +423,33 @@ footer .container{
     }
      /*Insertamos imagen en registrese*/
      #registrese{
-        background-image: url("../images/registrese.png");
+        background-image: url("media/registrese.png");
         background-repeat: no-repeat;
         /*le asignamos un tamaño a la imagen*/
         background-size: 300px 300px ;
         /*pociciono la imagen arriba abajo y como va  aparece la imagen en el div*/
-        background-position: calc(100vw - 400px) 0px;
+        background-position: calc(100vw - 500px) 0px;
+        
      }
- /*Modificamos h2*/
-  #registrese h2{
-    text-align:initial;
-    margin-left: 120px;
+
+    /*Modificamos h2*/
+    #registrese h2{
+        text-align:initial;
+        margin-left: 120px;
+    }
+    /*Modificamos reservas h2*/
+    #reservas h2{
+        font-size: 3em;
+    }
+    /*Modificamos reservas boton*/
+    #reservas button{
+        font-size: 1em;
+    }
+
+    /***fin version movil**/
+
+    /***modificamos registrese para pantalla 1200px**/
+    @media (min-width:1200px){
+        #registrese{background-position-x:calc(100vm - 800px) ;}
+    }
 }
-
-
-}
-
-#formulreg{
-    display: inline;
-    position:right;
-    float:inline-start;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
-    flex-direction: column;
-    right:80px;
-    top:100px;
-    padding: 20px;
-
-    
-}
-
-
-#formulreg form{
-    width: 400px;
-  padding: 16px;
-  border-radius: 10px;
-  margin: auto;
-  background-color: #ccc;
-}
-
-#formulref input{
-    padding: 3px 10px;
-    border: 1px solid #f6f6f6;
-    border-radius: 3px;
-    margin: 8px 10px;
-    display: inline-block;
-}
-
-#formulref button {
-    text-align: center;
-    font-weight: bold;
-  }
-
-div.titulo_pagina {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    flex-direction: column;
-    height: 20vh;
-    color: #377ba8;
-    background-color: rgb(219, 232, 236);
-  }
-
-  div.titulo_pagina h1{
-    font-family: 'Courier New', Courier, monospace;
-  }
